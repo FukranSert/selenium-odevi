@@ -1,0 +1,92 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7XqNTeoJavCDSImAcuhCVI9txOPGoCcCm3g&usqp=CAU');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+.rounded-search-container {
+   
+    position: absolute;
+    left: 360px;
+    top: 250px;
+    
+
+}
+
+.rounded-search {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 20px; 
+    outline: none; 
+    width: 300;
+}
+
+.search-button {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    color: #555;
+}
+::placeholder{color: black;}
+.onemli{font-family: 'Shadows Into Light', cursive;
+    border: 2px solid black;
+    border-radius: 40px;
+    position: absolute;
+    top: 100px;
+    left: 300px;
+    font-size: 70px;
+    padding: 10px;
+    background-image:url("https://img.pixers.pics/pho_wat(s3:700/FO/58/93/47/24/700_FO58934724_543495a52526ea3dca5818866c01db35.jpg,700,700,cms:2018/10/5bd1b6b8d04b8_220x50-watermark.png,over,480,650,jpg)/cikartmalar-hediye-desen-arka-plan.jpg.jpg");
+
+
+}
+
+.onemli2{
+    font-family: 'Playfair Display', serif;
+    position: absolute;
+    left: 340px;
+    top: 220px;
+    color: rgb(0, 0, 0);
+    border: 3px ridge black;
+    border-radius: 30px;
+    font-size: 10px;
+    background-image: url("https://i.pinimg.com/originals/dc/8f/5a/dc8f5a155b83d90f3a8d7a66eac3db7c.jpg");
+
+
+
+}
+#loading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    z-index: 9999;
+}
+  
+.spinner {
+    border: 8px solid rgba(0, 0, 0, 0.3);
+    border-top: 8px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+  
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

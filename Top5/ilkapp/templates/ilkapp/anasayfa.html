@@ -1,0 +1,35 @@
+
+{% extends "base.html" %}
+{% load static %}
+{% block extra_css %}
+<link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="{% static 'deneme2.css' %}">
+{% endblock extra_css %}
+{% block content %}
+<div id="loading-container">
+    <div class="spinner"></div>
+    <p>Sayfa yükleniyor...</p>
+  </div>
+<br><br><br><br>
+<h1 class="onemli">Ne Ariyordunuz?</h1>
+<form action="" method="POST">
+    {% csrf_token %}
+<div class="rounded-search-container" >
+
+    <input type="text" class="rounded-search" placeholder="Ürün Adı Giriniz" name="user_search">
+    <button type="submit"    class="search-button">&#128269;</button>
+</div>
+</form>
+
+<p class="onemli2">Siz istediginizi ürünü yazin biz sitelerde o adla en cok satilanları getirelim</p>
+
+
+
+
+
+
+
+
+<script src="{% static 'loader.js' %}"></script>  
+{% endblock content %}

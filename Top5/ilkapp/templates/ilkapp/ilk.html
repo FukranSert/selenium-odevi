@@ -1,0 +1,91 @@
+
+{% extends "base.html" %}
+{% load static %}
+{% block extra_css %}
+<link rel="stylesheet" type="text/css" href="{% static 'deneme3.css' %}">
+
+{% endblock extra_css %}
+
+{% block content %}
+
+
+<br><br><br><br>
+<form action="" method="POST">
+    {% csrf_token %}
+<div class="rounded-search-container" >
+
+    <input type="text" class="rounded-search" placeholder="Ürün Adı Giriniz" name="user_search">
+    <button type="submit"    class="search-button">&#128269;</button>
+</div>
+</form>
+<h1 style="text-align: center; margin-top: 60px; color: black;">{{ürün}} İÇİN ÇOK SATANLAR</h1>
+<div class="trendyol">
+<h2 style="padding-left:35; color: black;">Trendyol</h2>
+
+
+  
+
+
+
+
+{% for x in trendyol %}
+<div class="card" style="width: 12rem;">
+    <img src={{x.2}} class="card-img-top" style="max-height: 120px; object-fit: contain;" alt="...">
+    <div class="card-body">
+        <h5 class="card-title" style="font-size: 12px;">{{x.1}}</h5>
+        
+        <p class="card-text" style="font-size: 10px;">{{x.0}}</p>
+        <a href={{x.3}} class="btn btn-primary" style="font-size: 10px;">Ürüne Git</a>
+    </div>
+</div>
+<br>
+{% endfor %}
+</div>
+
+<div class="hepsiburada">
+    <h2 style="padding-left:8; color: black;">Hepsiburada</h2>
+    {% for x in hepsiburada %}
+<div class="card" style="width: 12rem;">
+    <img src={{x.2}} class="card-img-top" style="max-height: 120px; object-fit: contain;" alt="...">
+    <div class="card-body">
+        <h5 class="card-title" style="font-size: 12px;">{{x.1}}</h5>
+        
+        <p class="card-text" style="font-size: 10px;">{{x.0}}</p>
+        <a href={{x.3}} class="btn btn-primary" style="font-size: 10px;">Ürüne Git</a>
+    </div>
+</div>
+<br>
+{% endfor %}
+    </div>
+    <div class="amazon">
+<h2 style="padding-left:40; color: black;">Amazon</h2>
+{% for x in amazon %}
+<div class="card" style="width: 12rem;">
+    <img src={{x.2}} class="card-img-top" style="max-height: 120px; object-fit: contain;" alt="...">
+    <div class="card-body">
+        <h5 class="card-title" style="font-size: 12px;">{{x.1}}</h5>
+        
+        <p class="card-text" style="font-size: 10px;">{{x.0}}</p>
+        <a href={{x.3}} class="btn btn-primary" style="font-size: 10px;">Ürüne Git</a>
+    </div>
+</div>
+<br>
+{% endfor %}
+</div>
+<div class="n11">
+    <h2 style="padding-left:70; color: black;" >N11</h2>
+    {% for x in n11 %}
+<div class="card" style="width: 12rem;">
+    <img src={{x.2}} class="card-img-top" style="max-height: 120px; object-fit: contain;" alt="...">
+    <div class="card-body">
+        <h5 class="card-title" style="font-size: 12px;">{{x.1}}</h5>
+        
+        <p class="card-text" style="font-size: 10px;">{{x.0}}</p>
+        <a href={{x.3}} class="btn btn-primary" style="font-size: 10px;">Ürüne Git</a>
+    </div>
+</div>
+<br>
+{% endfor %}
+
+    </div>
+{% endblock content %}
